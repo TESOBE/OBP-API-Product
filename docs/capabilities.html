@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP-API Capabilities</title>
+<meta name="description" content="What OBP-API does: accounts, payments, customers, KYC, files, products, the asset registry, dynamic APIs, AI agents and operations.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html" aria-current="page">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">Capabilities</p>
+    <h1>Everything a bank's API needs, in one platform.</h1>
+    <p class="lede">From the customer's account to the operator's dashboard: <strong>banking, customers, products, assets and your own APIs</strong>, all with the same access control and documentation.</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="banking">
+    <div class="sechead"><h2>Accounts and payments</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>Accounts</h3>
+        <p>Accounts at many banks behind one API.</p>
+        <ul>
+          <li>Balances, account holders and attributes</li>
+          <li>Account applications and access requests</li>
+          <li>Views that decide which fields each party sees</li>
+        </ul>
+      </div>
+      <div class="card reveal d2">
+        <h3>Payments</h3>
+        <p>Payment requests that follow the bank's own rules.</p>
+        <ul>
+          <li>SEPA, counterparty, account and free-form payments</li>
+          <li>Challenges, SCA and maker/checker approval</li>
+          <li>Standing orders, direct debits and variable recurring payments</li>
+        </ul>
+      </div>
+      <div class="card reveal d3">
+        <p class="tag">v7.0.0</p>
+        <h3>Utility and bill payments</h3>
+        <p>Pay a bill or buy a prepaid electricity token.</p>
+        <ul>
+          <li>Look the payee up first, to confirm who is paid</li>
+          <li>Get the result later by callback</li>
+        </ul>
+      </div>
+      <div class="card reveal d1">
+        <p class="tag">v7.0.0</p>
+        <h3>Payment promises and netting</h3>
+        <p>Hold payments between banks as promises, and settle them together.</p>
+        <ul>
+          <li>Each promise carries the payer's originator information</li>
+          <li>One net transaction per pair of banks</li>
+          <li>Fees settled separately</li>
+        </ul>
+      </div>
+      <div class="card reveal d2">
+        <h3>Counterparties</h3>
+        <p>Payees with their own metadata and limits.</p>
+        <ul>
+          <li>Counterparty limits per payment, day or month</li>
+          <li>Tags, comments, images and locations on transactions</li>
+        </ul>
+      </div>
+      <div class="card reveal d3">
+        <h3>Foreign exchange</h3>
+        <p>FX rates per bank, and conversion that keeps each currency's own decimal places.</p>
+        <ul>
+          <li>OMR, KWD and BHD keep three decimals</li>
+          <li>JPY keeps none</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="customers">
+    <div class="sechead"><h2>Customers, KYC and files</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>Customers and KYC</h3>
+        <p>Retail and corporate customers, with everything a bank records about them.</p>
+        <ul>
+          <li>KYC checks, documents and statuses</li>
+          <li>Customer attributes, addresses and tax residence</li>
+          <li>Customers linked to Users and to accounts</li>
+        </ul>
+      </div>
+      <div class="card reveal d2">
+        <p class="tag">v7.0.0</p>
+        <h3>Files</h3>
+        <p>Documents and photographs, stored safely and attached to the records they belong to.</p>
+        <ul>
+          <li>Content never changes once stored, and its SHA-256 is kept</li>
+          <li>Scanned before others can open it</li>
+          <li>Shared with chosen Users, or published</li>
+        </ul>
+      </div>
+      <div class="card reveal d3">
+        <p class="tag">v7.0.0</p>
+        <h3>Customer emails</h3>
+        <p>Send a customer a plain-text email at the address on their record, without the address being revealed to the sender.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="products">
+    <div class="sechead"><h2>Products, cards and places</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>Products and fees</h3>
+        <p>Accounts, loans, cards and savings products, with their attributes, fees and collections.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>Cards</h3>
+        <p>Card records with their attributes, limits and controls.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Branches and ATMs</h3>
+        <p>Locations, opening hours, services and accessibility, searchable by place.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="assets">
+    <div class="sechead"><h2>Assets and retention</h2></div>
+    <div class="cards two">
+      <div class="card reveal d1">
+        <p class="tag">v7.0.0</p>
+        <h3>The asset registry</h3>
+        <p>Every currency, precious metal and accounting unit in ISO 4217, crypto assets, and the assets a bank issues itself: deposit tokens, stablecoins, bonds and fund shares.</p>
+        <ul>
+          <li>Each asset has its own decimal places</li>
+          <li>Codes are matched ignoring letter case</li>
+          <li>An amount with too many decimals is refused, never rounded away</li>
+        </ul>
+      </div>
+      <div class="card reveal d2">
+        <p class="tag">v7.0.0</p>
+        <h3>Data retention</h3>
+        <p>Retention policies per space say how long records are kept, and whether they are archived or deleted afterwards.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="dynamic">
+    <div class="sechead"><h2>Dynamic APIs</h2></div>
+    <p class="intro">Go beyond the standard banking model without waiting for a release.</p>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>Dynamic Entities</h3>
+        <p>Define your own data model in JSON. OBP creates its endpoints and Roles at once.</p>
+        <ul>
+          <li>Typed fields, references and field-level Roles</li>
+          <li>Each record says who created and changed it, and for whom</li>
+        </ul>
+      </div>
+      <div class="card reveal d2">
+        <h3>Dynamic Endpoints and Resource Docs</h3>
+        <p>Add endpoints from an OpenAPI document, or write their logic in Scala or Java, without a release.</p>
+      </div>
+      <div class="card reveal d3">
+        <p class="tag">v7.0.0</p>
+        <h3>Domain APIs</h3>
+        <p>Publish a space's entities and endpoints under a base path of their own, with their own OpenAPI document, so your API is not hidden behind OBP's URLs.</p>
+      </div>
+      <div class="card reveal d1">
+        <h3>Webhooks</h3>
+        <p>Tell outside systems when records change, with identifiers only, so they read the data with their own permissions.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>Endpoint mapping and method routing</h3>
+        <p>Route endpoints and connector methods to the implementation that should answer them.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Spaces</h3>
+        <p>Dynamic data, files and docs live in a space: one bank, or the system space shared by all.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="ai">
+    <div class="sechead"><h2>AI agents</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>Opey</h3>
+        <p>A conversational assistant that answers questions about the API and the user's own data, with the user's own permissions.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>OBP-MCP</h3>
+        <p>A Model Context Protocol server, so any AI agent can find the right endpoint and call it.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Agents acting for people</h3>
+        <p>An agent can act on behalf of a User, and every record says both who acted and for whom.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="operations">
+    <div class="sechead"><h2>Operations</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>Telemetry</h3>
+        <p>Requests, connector calls, caches, the database pool and memory, for Prometheus and Grafana.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>API metrics</h3>
+        <p>Every call recorded, with its Consumer, User, duration and outcome, and aggregated on demand.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Traffic and deployment checks</h3>
+        <p>See where traffic comes from right now, and check that proxies, rate limits and logging are set up well.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="mailto:contact@tesobe.com?subject=OBP-API">contact@tesobe.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <span>Built and supported by</span>
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

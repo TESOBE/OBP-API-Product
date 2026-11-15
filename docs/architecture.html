@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP-API Architecture</title>
+<meta name="description" content="How OBP-API fits together: applications, the API layers, connectors to core banking systems, the OBP ecosystem and the technology stack.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html" aria-current="page">Architecture</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">Architecture</p>
+    <h1>Between your applications and your systems.</h1>
+    <p class="lede">Applications call OBP-API. OBP-API applies <strong>the standards, authentication, Roles and views</strong>, then reaches each bank's systems through the connector that suits them.</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="diagram" class="reveal">
+    <div class="sechead"><h2>How a call flows</h2></div>
+    <div class="diagram">
+      <svg viewBox="0 0 900 384" role="img" aria-labelledby="diagram-title">
+      <title id="diagram-title">Applications call OBP-API, which applies standards, security and dynamic APIs, and reaches each bank's systems through connectors.</title>
+      <text class="layer" x="20" y="30">APPLICATIONS</text>
+      <text class="layer" x="356" y="30">OBP-API</text>
+      <text class="layer" x="690" y="30">YOUR SYSTEMS</text>
+      <path class="wire" d="M200 60 C 270 60, 280 210, 340 210"/>
+      <path class="flow" d="M200 60 C 270 60, 280 210, 340 210" style="animation-delay:-0.0s"/>
+      <rect class="box" x="20" y="38" width="180" height="44" rx="8"/>
+      <text class="lbl" x="34" y="65">Your apps and TPPs</text>
+      <path class="wire" d="M200 128 C 270 128, 280 210, 340 210"/>
+      <path class="flow back" d="M200 128 C 270 128, 280 210, 340 210" style="animation-delay:-0.5s"/>
+      <rect class="box" x="20" y="106" width="180" height="44" rx="8"/>
+      <text class="lbl" x="34" y="133">API Explorer</text>
+      <path class="wire" d="M200 196 C 270 196, 280 210, 340 210"/>
+      <path class="flow" d="M200 196 C 270 196, 280 210, 340 210" style="animation-delay:-1.0s"/>
+      <rect class="box" x="20" y="174" width="180" height="44" rx="8"/>
+      <text class="lbl" x="34" y="201">API Manager</text>
+      <path class="wire" d="M200 264 C 270 264, 280 210, 340 210"/>
+      <path class="flow back" d="M200 264 C 270 264, 280 210, 340 210" style="animation-delay:-1.5s"/>
+      <rect class="box" x="20" y="242" width="180" height="44" rx="8"/>
+      <text class="lbl" x="34" y="269">Portal</text>
+      <path class="wire" d="M200 332 C 270 332, 280 210, 340 210"/>
+      <path class="flow" d="M200 332 C 270 332, 280 210, 340 210" style="animation-delay:-2.0s"/>
+      <rect class="box" x="20" y="310" width="180" height="44" rx="8"/>
+      <text class="lbl" x="34" y="337">AI agents (Opey, MCP)</text>
+      <path class="wire" d="M560 210 C 620 210, 630 76, 690 76"/>
+      <path class="flow back" d="M560 210 C 620 210, 630 76, 690 76" style="animation-delay:-0.0s"/>
+      <rect class="box" x="690" y="52" width="190" height="48" rx="8"/>
+      <text class="lbl" x="704" y="81">Core banking systems</text>
+      <path class="wire" d="M560 210 C 620 210, 630 156, 690 156"/>
+      <path class="flow" d="M560 210 C 620 210, 630 156, 690 156" style="animation-delay:-0.7s"/>
+      <rect class="box" x="690" y="132" width="190" height="48" rx="8"/>
+      <text class="lbl" x="704" y="161">Payment rails</text>
+      <path class="wire" d="M560 210 C 620 210, 630 236, 690 236"/>
+      <path class="flow back" d="M560 210 C 620 210, 630 236, 690 236" style="animation-delay:-1.4s"/>
+      <rect class="box" x="690" y="212" width="190" height="48" rx="8"/>
+      <text class="lbl" x="704" y="241">Blockchains</text>
+      <path class="wire" d="M560 210 C 620 210, 630 316, 690 316"/>
+      <path class="flow" d="M560 210 C 620 210, 630 316, 690 316" style="animation-delay:-2.1s"/>
+      <rect class="box" x="690" y="292" width="190" height="48" rx="8"/>
+      <text class="lbl" x="704" y="321">Bank Nodes</text>
+      <rect class="core" x="340" y="52" width="220" height="316" rx="12"/>
+      <text class="core-lbl" x="450" y="92" text-anchor="middle">OBP-API</text>
+      <rect x="360" y="110" width="180" height="32" rx="6" fill="none" stroke="#3A4460"/>
+      <text class="core-sub" x="450" y="131" text-anchor="middle">STANDARDS</text>
+      <rect x="360" y="156" width="180" height="32" rx="6" fill="none" stroke="#3A4460"/>
+      <text class="core-sub" x="450" y="177" text-anchor="middle">AUTHENTICATION</text>
+      <rect x="360" y="202" width="180" height="32" rx="6" fill="none" stroke="#3A4460"/>
+      <text class="core-sub" x="450" y="223" text-anchor="middle">ROLES AND VIEWS</text>
+      <rect x="360" y="248" width="180" height="32" rx="6" fill="none" stroke="#3A4460"/>
+      <text class="core-sub" x="450" y="269" text-anchor="middle">DYNAMIC APIS</text>
+      <rect x="360" y="294" width="180" height="32" rx="6" fill="none" stroke="#3A4460"/>
+      <text class="core-sub" x="450" y="315" text-anchor="middle">CONNECTORS</text>
+      </svg>
+    </div>
+    <p class="caption">Each call is authenticated, checked against the caller's Roles and views, and passed to the connector configured for that bank and method.</p>
+  </section>
+
+
+  <section id="connectors">
+    <div class="sechead"><h2>Connectors</h2></div>
+    <p class="intro">A connector translates OBP's calls for your systems. Choose one per bank, or one per method.</p>
+    <ul class="points">
+      <li class="reveal"><b>Mapped</b>OBP's own database, for sandboxes and new banks</li>
+      <li class="reveal d1"><b>REST</b>Call your systems' own HTTP APIs</li>
+      <li class="reveal d2"><b>RabbitMQ</b>Reliable messages to an adapter beside your core banking system</li>
+      <li class="reveal d3"><b>gRPC</b>Low-latency calls to an adapter</li>
+      <li class="reveal"><b>Akka</b>Remote calls into a secure zone</li>
+      <li class="reveal d1"><b>Stored procedures</b>Straight into the bank's database</li>
+      <li class="reveal d2"><b>Cardano and Ethereum</b>Accounts and payments on a blockchain</li>
+      <li class="reveal d3"><b>Star</b>Route each method to a different connector</li>
+    </ul>
+  </section>
+
+
+  <section id="ecosystem">
+    <div class="sechead"><h2>The OBP ecosystem</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>API Explorer II</h3>
+        <p>Try every endpoint, read its documentation and see the Roles it needs.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>API Manager II</h3>
+        <p>Manage banks, users, Roles, consumers, rate limits and caches.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>OBP Portal</h3>
+        <p>Where developers sign up, register their apps and get started.</p>
+      </div>
+      <div class="card reveal d1">
+        <h3>Opey and OBP-MCP</h3>
+        <p>AI agents that find and call endpoints with the user's own permissions.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>OBP-OIDC and Keycloak</h3>
+        <p>Identity providers for development and production.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>OBP-Sentinel</h3>
+        <p>Watches running instances and suggests the improvements that matter most.</p>
+      </div>
+      <div class="card reveal d1">
+        <h3>OBP Bank Node</h3>
+        <p>Runs inside a bank's network and connects it to a platform operator, with outbound connections only.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>Adapters</h3>
+        <p>SEPA, RabbitMQ and gRPC adapters that sit beside your core banking system.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>OBP-API Dispatch</h3>
+        <p>Routes requests between instances, for example by region.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="stack">
+    <div class="sechead"><h2>Technology</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Scala 2.13, http4s and Cats Effect</b>A standalone, non-blocking server in one executable JAR</li>
+      <li class="reveal d1"><b>PostgreSQL, SQL Server, Oracle, MySQL or H2</b>Your choice of database</li>
+      <li class="reveal d2"><b>Redis</b>Shared rate limits, caches and penalties across instances</li>
+      <li class="reveal d3"><b>Prometheus and Grafana</b>Telemetry on a port of its own</li>
+      <li class="reveal"><b>Docker and Kubernetes</b>Run one instance or many behind a load balancer</li>
+      <li class="reveal d1"><b>Many banks, one instance</b>Each bank is its own space, with its own connector routing</li>
+    </ul>
+  </section>
+
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="mailto:contact@tesobe.com?subject=OBP-API">contact@tesobe.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <span>Built and supported by</span>
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

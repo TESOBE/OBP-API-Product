@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP-API Security</title>
+<meta name="description" content="How OBP-API decides access on every call: views, Roles, Scopes, Platform Apps, consents, OAuth 2, OpenID Connect, mutual TLS and rate limits.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html" aria-current="page">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">Security and control</p>
+    <h1>Access decided on every call.</h1>
+    <p class="lede">Two layers of permission work together. <strong>Roles decide which endpoints may be called. Views decide which accounts and fields may be used.</strong> Customers add a third with their consents.</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="access">
+    <div class="sechead"><h2>Who may do what</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>Views</h3>
+        <p>A view decides which fields of an account each party sees, and what they may do with it. Owner, accountant, auditor and public views come built in, and banks add their own.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>Roles, Entitlements and Scopes</h3>
+        <p>Hundreds of Roles each open a small set of endpoints. People hold them as Entitlements, applications as Scopes, at one bank or for the whole system.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Groups</h3>
+        <p>Give the same Roles to many people at once, and keep them in step when the Group changes.</p>
+      </div>
+      <div class="card reveal d1">
+        <h3>Attribute-based rules</h3>
+        <p>ABAC rules decide access from the attributes of the user, the account and the request.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>Maker/checker</h3>
+        <p>The person who creates a payment request cannot be the one who approves it.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Mandates</h3>
+        <p>Corporate accounts with signatory panels and multi-signature approval.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="apps">
+    <div class="sechead"><h2>Applications and consents</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <p class="tag">v7.0.0</p>
+        <h3>Platform Apps</h3>
+        <p>Mark the applications your installation runs itself. Only they may act as themselves, they declare the Scopes they need, and administrators see what is missing.</p>
+      </div>
+      <div class="card reveal d2">
+        <p class="tag">v7.0.0</p>
+        <h3>Consumer Account Access</h3>
+        <p>Grant an application a view of an account, so a service can act on it with its own token, without a stand-in user.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Consents</h3>
+        <p>Customers decide which applications may see their data or make payments, for how long, with SCA. Unused consents expire by themselves.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="authentication">
+    <div class="sechead"><h2>Authentication</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>OAuth 2 and OpenID Connect</h3>
+        <p>Keycloak, OBP-OIDC and public providers such as Google and Microsoft, each limited to your own client ids.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>Mutual TLS</h3>
+        <p>Client certificates checked at your proxy and passed on as PSD2-CERT, with the proxy itself named and trusted.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Direct Login and SIWE</h3>
+        <p>Username and password for trusted apps, and Sign-In With Ethereum for wallet holders.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="protection">
+    <div class="sechead"><h2>Protection built in</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Rate limits</b>Per application, per user and per IP address, shared by every instance through Redis</li>
+      <li class="reveal d1"><b>IP penalties</b>An operator can slow down or stop one address at once, and undo it as easily</li>
+      <li class="reveal d2"><b>Amounts kept exact</b>An amount with more decimals than its currency allows is refused, so no money disappears in rounding</li>
+      <li class="reveal d3"><b>Audit trail</b>Who did what, when, for whom and through which application</li>
+      <li class="reveal"><b>Safe file handling</b>Files are checked against their type, scanned, and served so they can never run as a page</li>
+      <li class="reveal d1"><b>Safe deletion</b>Cascade deletes stay off unless an operator turns them on</li>
+    </ul>
+  </section>
+
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="mailto:contact@tesobe.com?subject=OBP-API">contact@tesobe.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <span>Built and supported by</span>
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

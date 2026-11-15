@@ -1,0 +1,49 @@
+{
+  "source": "https://apisandbox.openbankproject.com",
+  "fetched_at": "2026-11-14T18:20:08Z",
+  "latest_version": "v7.0.0",
+  "latest_version_status": "BLEEDING_EDGE",
+  "endpoints": 935,
+  "roles": 461,
+  "tags": 114,
+  "glossary_items": 480,
+  "obp_versions": [
+    "v1.2.1",
+    "v1.3.0",
+    "v1.4.0",
+    "v2.0.0",
+    "v2.1.0",
+    "v2.2.0",
+    "v3.0.0",
+    "v3.1.0",
+    "v4.0.0",
+    "v5.0.0",
+    "v5.1.0",
+    "v6.0.0",
+    "v7.0.0"
+  ],
+  "standards": {
+    "BG": [
+      "v1.3",
+      "v2"
+    ],
+    "UK": [
+      "v2.0",
+      "v4.0.1",
+      "v3.1"
+    ]
+  },
+  "sandbox_banks": 227,
+  "areas": {
+    "Accounts": 123,
+    "Payments": 200,
+    "Customers and KYC": 135,
+    "Consents and mandates": 48,
+    "Cards and products": 70,
+    "Dynamic APIs": 134,
+    "Access control": 179,
+    "Files, assets and retention": 3,
+    "Operations": 65,
+    "Branches and ATMs": 27
+  }
+}

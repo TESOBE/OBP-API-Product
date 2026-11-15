@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP-API Standards</title>
+<meta name="description" content="The API standards OBP-API serves: the Open Bank Project API, Berlin Group NextGenPSD2 and UK Open Banking, with OpenAPI documents for each.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html" aria-current="page">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">Standards</p>
+    <h1>One platform, many standards.</h1>
+    <p class="lede">OBP-API serves <strong>the Open Bank Project API, Berlin Group NextGenPSD2 and UK Open Banking</strong> side by side, from the same data and under the same rules.</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="standards">
+    <div class="sechead"><h2>The standards we serve</h2></div>
+    <div class="standards">
+      <div class="standard native reveal">
+        <h3>Open Bank Project</h3>
+        <div class="versions"><span class="pill">v1.2.1 to v7.0.0</span><span class="pill" data-text="latest_version">v7.0.0</span></div>
+        <p>Our own API, and the widest: 900+ endpoints for accounts, payments, customers, products, consents, access control, dynamic APIs and operations. Old versions keep working while new ones are added, so apps upgrade when they choose.</p>
+      </div>
+      <div class="standard reveal d1">
+        <h3>Berlin Group NextGenPSD2</h3>
+        <div class="versions"><span class="pill">v1.3</span></div>
+        <p>The European PSD2 standard: account information, payment initiation, confirmation of funds and signing baskets, with consents and SCA.</p>
+      </div>
+      <div class="standard reveal d2">
+        <h3>UK Open Banking</h3>
+        <div class="versions"><span class="pill">v3.1</span><span class="pill">v4.0.1</span></div>
+        <p>Accounts and transactions, payment initiation, confirmation of funds, event notifications and variable recurring payments, with consent authorisation and FAPI headers.</p>
+      </div>
+      <div class="standard reveal d3">
+        <h3>OpenAPI everywhere</h3>
+        <div class="versions"><span class="pill">OpenAPI 3.1</span><span class="pill">Swagger 2</span></div>
+        <p>Every standard, every version and every Domain API is described in OpenAPI, ready for code generators, API gateways and conformance tools.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="same">
+    <div class="sechead"><h2>Several standards, one platform</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>One set of data</h3>
+        <p>Every standard reads and writes the same accounts, customers and consents, so a bank supports several without copying data.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>One set of rules</h3>
+        <p>Views, Roles and consents apply in the same way whichever standard is called.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>One place to look</h3>
+        <p>Metrics, Telemetry and the audit trail cover every standard together.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="regulation">
+    <div class="sechead"><h2>Built for regulation</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>PSD2</b>Consents, SCA, TPP access and qualified certificates</li>
+      <li class="reveal d1"><b>GDPR</b>Customers control their data, and every access is recorded</li>
+      <li class="reveal d2"><b>FAPI</b>Financial-grade API security profiles</li>
+      <li class="reveal d3"><b>eIDAS</b>QWAC and QSealC certificates for payment providers</li>
+      <li class="reveal"><b>FATF Recommendation 16</b>Payer information carried with payments between banks</li>
+      <li class="reveal d1"><b>Regulated entities</b>A register of the regulated providers that may call</li>
+    </ul>
+  </section>
+
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="mailto:contact@tesobe.com?subject=OBP-API">contact@tesobe.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <span>Built and supported by</span>
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
