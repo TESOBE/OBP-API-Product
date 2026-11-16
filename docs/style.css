@@ -270,3 +270,6 @@ footer{margin-top:64px; border-top:1px solid var(--rule-strong); padding-top:22p
 }
 :root[data-theme="dark"] .maker img{filter:none}
 @media (max-width:480px){ .obp-logo{width:190px} }
+
+/* product names in the ecosystem cards link to their own sites */
+.card h3 a{color:inherit; text-decoration:underline; text-decoration-color:var(--obp); text-underline-offset:4px}

@@ -87,10 +87,6 @@
       <div class="card reveal d3">
         <h3>Foreign exchange</h3>
         <p>FX rates per bank, and conversion that keeps each currency's own decimal places.</p>
-        <ul>
-          <li>OMR, KWD and BHD keep three decimals</li>
-          <li>JPY keeps none</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -113,7 +109,7 @@
         <h3>Files</h3>
         <p>Documents and photographs, stored safely and attached to the records they belong to.</p>
         <ul>
-          <li>Content never changes once stored, and its SHA-256 is kept</li>
+          <li>Content can never be altered once stored</li>
           <li>Scanned before others can open it</li>
           <li>Shared with chosen Users, or published</li>
         </ul>
@@ -154,9 +150,9 @@
         <h3>The asset registry</h3>
         <p>Every currency, precious metal and accounting unit in ISO 4217, crypto assets, and the assets a bank issues itself: deposit tokens, stablecoins, bonds and fund shares.</p>
         <ul>
-          <li>Each asset has its own decimal places</li>
-          <li>Codes are matched ignoring letter case</li>
-          <li>An amount with too many decimals is refused, never rounded away</li>
+          <li>Each asset has its own decimal places, from the yen to the Omani rial</li>
+          <li>Banks register their own assets through the API</li>
+          <li>Tokens are linked to their identity on the chain</li>
         </ul>
       </div>
       <div class="card reveal d2">
@@ -253,7 +249,6 @@
 
   <footer>
     <a class="maker" href="https://www.tesobe.com">
-      <span>Built and supported by</span>
       <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
     </a>
     <p class="stats">
