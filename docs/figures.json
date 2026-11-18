@@ -1,6 +1,6 @@
 {
   "source": "https://apisandbox.openbankproject.com",
-  "fetched_at": "2026-11-16T13:39:34Z",
+  "fetched_at": "2026-11-18T13:58:34Z",
   "latest_version": "v7.0.0",
   "latest_version_status": "BLEEDING_EDGE",
   "endpoints": 972,
@@ -33,7 +33,7 @@
       "v3.1"
     ]
   },
-  "sandbox_banks": 227,
+  "sandbox_banks": 228,
   "areas": {
     "Accounts": 125,
     "Payments": 199,
