@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP Bank Node</title>
+<meta name="description" content="OBP Bank Node runs inside a bank and connects its core banking system to cross-border payment corridors using the Open Corridor standard, with a private, verifiable record of every step.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">OBP Bank Node</p>
+    <h1>Join a payment corridor from your own data centre.</h1>
+    <p class="lede">OBP Bank Node is a <strong>small service that runs inside your bank</strong> and connects your core banking system to cross-border payment corridors using the Open Corridor standard, with a private, verifiable record of every step and no OBP infrastructure of your own to run.</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="journey">
+    <div class="sechead"><h2>A payment, step by step</h2></div>
+    <ol class="steps">
+      <li class="reveal"><b>Send</b><span>Your core banking system sends a payment to the node, in the shape of an OBP transaction request, and gets an answer in milliseconds.</span></li>
+      <li class="reveal"><b>Promise</b><span>The node records a promise on Cardano: a salted fingerprint, with no amounts, names or personal data.</span></li>
+      <li class="reveal"><b>Credit</b><span>The receiving bank's node checks the fingerprint, then delivers the credit to its own core banking system.</span></li>
+      <li class="reveal"><b>Settle</b><span>Banks settle what they owe each other, and the node follows each settlement until it is final.</span></li>
+    </ol>
+  </section>
+
+  <section id="features">
+    <div class="sechead"><h2>What it does</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Speaks OBP</b>Payments arrive as OBP transaction requests, routed by BIC and IBAN, mobile number or OBP account</li>
+      <li class="reveal d1"><b>Never loses a payment</b>A durable outbox keeps every request until OBP-API has it</li>
+      <li class="reveal d2"><b>Private on-chain records</b>Only a salted fingerprint goes on Cardano; anyone entitled can check it, nobody else learns anything</li>
+      <li class="reveal d3"><b>Delivers credits your way</b>A webhook in OBP or ISO 20022 camt.054 format, a database table, or a file drop, retried for a day</li>
+      <li class="reveal"><b>Handles refusals</b>A credit your system refuses becomes a linked return that offsets the original payment</li>
+      <li class="reveal d1"><b>Shows the evidence</b>Read APIs, and a web page that follows each payment from send to settle</li>
+    </ul>
+  </section>
+
+  <section id="banks">
+    <div class="sechead"><h2>Built for banks</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Outbound connections only</b>Runs inside your network; nothing needs to reach in</li>
+      <li class="reveal d1"><b>Your keys</b>You hold your own keys and run your own Cardano node</li>
+      <li class="reveal d2"><b>Small</b>One binary, a Docker image of about 20 MB, and under 50 MB of memory</li>
+      <li class="reveal d3"><b>A Platform App</b>Each node declares the Scopes it needs, and sees only the accounts it is given</li>
+    </ul>
+  </section>
+
+  <section id="run">
+    <div class="sechead"><h2>Run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Rust</b>One service, with SQLite for its outbox</li>
+      <li class="reveal d1"><b>Docker images</b>One per Cardano network, with Compose files that run the node beside cardano-node and Ogmios</li>
+      <li class="reveal d2"><b>Configured in one file</b>A YAML file, with any setting overridable by environment</li>
+      <li class="reveal d3"><b>Open source</b>AGPL on <a href="https://github.com/OpenBankProject/OBP-Bank-Node">GitHub</a>, with commercial licences from TESOBE</li>
+    </ul>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="portal.html">OBP Portal</a></h3>
+        <p>Where developers sign up, get an API key, read the guides and make their first call.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-explorer.html">API Explorer</a></h3>
+        <p>Every endpoint documented, with the Roles it needs, and callable from the page.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="api-manager.html">API Manager</a></h3>
+        <p>Where bank staff manage users, Roles, consumers and data, and watch the platform live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

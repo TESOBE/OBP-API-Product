@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP Hola</title>
+<meta name="description" content="OBP Hola: a reference third-party app that shows the OAuth2 and consent flow end to end, with UK Open Banking, Berlin Group and OBP APIs.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">OBP Hola</p>
+    <h1>See the whole journey, end to end.</h1>
+    <p class="lede">OBP Hola is a <strong>working third-party app</strong> that walks through login, consent, account access and payments, in UK Open Banking, Berlin Group and OBP styles, against your own OBP-API.</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="journey">
+    <div class="sechead"><h2>One journey, every step</h2></div>
+    <ol class="steps">
+      <li class="reveal"><b>Choose a standard</b><span>UK Open Banking (3.1 or 4.0), Berlin Group, or OBP's own APIs, including variable recurring payments.</span></li>
+      <li class="reveal"><b>Ask for consent</b><span>Pick the bank, the accounts and the permissions, how often and until when.</span></li>
+      <li class="reveal"><b>Log in and approve</b><span>The customer logs in at the bank's identity provider and grants access, with SCA.</span></li>
+      <li class="reveal"><b>Use it</b><span>Read accounts, balances, transactions and counterparties, and make payments, with the consent.</span></li>
+      <li class="reveal"><b>Revoke it</b><span>List the consents given and revoke one, and see access end.</span></li>
+    </ol>
+  </section>
+
+  <section id="for">
+    <div class="sechead"><h2>What it is for</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Showing it working</b>A live demo of open banking from the customer's side, for banks, regulators and partners</li>
+      <li class="reveal d1"><b>A reference for developers</b>Readable Java code for each flow, to copy into a real third-party app</li>
+      <li class="reveal d2"><b>Testing a platform</b>Prove that login, consent, mTLS and data access work on a new installation</li>
+      <li class="reveal d3"><b>Automated tests</b>Drives end-to-end browser tests with OBP Selenium</li>
+    </ul>
+  </section>
+
+  <section id="covers">
+    <div class="sechead"><h2>What it covers</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Three standards</b>UK Open Banking, Berlin Group and OBP, each with its own consent flow</li>
+      <li class="reveal d1"><b>Accounts and payments</b>Accounts, balances, transactions and counterparties, and payments to a counterparty, an account or an IBAN</li>
+      <li class="reveal d2"><b>Variable recurring payments</b>OBP consent requests for VRP, with their limits</li>
+      <li class="reveal d3"><b>mTLS</b>Calls OBP-API with a client certificate, and shows the certificate it presented</li>
+      <li class="reveal"><b>Your identity provider</b>OBP-OIDC by default, or Ory Hydra with private_key_jwt</li>
+      <li class="reveal d1"><b>Consents</b>Every consent given, its status and expiry, and revocation</li>
+    </ul>
+  </section>
+
+  <section id="run">
+    <div class="sechead"><h2>Run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>One JAR or one image</b>Java and Spring Boot, built with Maven, with a Dockerfile for Docker and Kubernetes</li>
+      <li class="reveal d1"><b>Configured by environment</b>The OBP-API address, the identity provider and the client credentials</li>
+      <li class="reveal d2"><b>Your certificates</b>A keystore and truststore when OBP-API requires mTLS</li>
+      <li class="reveal d3"><b>Open source</b>AGPL on <a href="https://github.com/OpenBankProject/OBP-Hola">GitHub</a>, with commercial licences from TESOBE</li>
+    </ul>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="portal.html">OBP Portal</a></h3>
+        <p>Where developers sign up, get an API key, read the guides and make their first call.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-explorer.html">API Explorer</a></h3>
+        <p>Every endpoint documented, with the Roles it needs, and callable from the page.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="api-manager.html">API Manager</a></h3>
+        <p>Where bank staff manage users, Roles, consumers and data, and watch the platform live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

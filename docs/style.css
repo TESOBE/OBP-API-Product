@@ -167,7 +167,7 @@ footer{margin-top:64px; border-top:1px solid var(--rule-strong); padding-top:22p
 .terminal .bar{display:flex; align-items:center; gap:6px; height:30px; padding:0 12px; background:#171D2D; border-bottom:1px solid #2E3650}
 .terminal .bar i{width:9px; height:9px; border-radius:50%; background:#3A435A}
 .terminal .bar span{margin-inline-start:10px; font-family:var(--mono); font-size:11px; color:#7F8895}
-.terminal pre{margin:0; padding:16px 18px 20px; font-family:var(--mono); font-size:12.5px; line-height:1.62; color:#C9D3DC; min-height:300px; white-space:pre-wrap; word-break:break-word}
+.terminal pre{margin:0; padding:16px 18px 20px; font-family:var(--mono); font-size:12.5px; line-height:1.62; color:#C9D3DC; min-height:400px; white-space:pre-wrap; word-break:break-word}
 .terminal .verb{color:var(--obp)}
 .terminal .path{color:var(--brand)}
 .terminal .key{color:#9FD0F0}
@@ -188,6 +188,7 @@ footer{margin-top:64px; border-top:1px solid var(--rule-strong); padding-top:22p
 /* cards */
 .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule)}
 .cards.two{grid-template-columns:repeat(2,1fr)}
+.cards.one{grid-template-columns:1fr}
 @media (max-width:760px){ .cards, .cards.two{grid-template-columns:1fr} }
 .card{background:var(--surface); padding:22px 20px 24px; transition:background-color .2s ease}
 .card:hover{background:var(--accent-soft)}
@@ -214,9 +215,16 @@ footer{margin-top:64px; border-top:1px solid var(--rule-strong); padding-top:22p
 .diagram svg{display:block; width:100%; height:auto}
 .diagram .box{fill:var(--ground); stroke:var(--rule-strong); stroke-width:1.2}
 .diagram .core{fill:var(--masthead); stroke:var(--obp); stroke-width:1.6}
-.diagram .lbl{font-family:var(--sans); font-size:13px; font-weight:600; fill:var(--ink)}
-.diagram .sub{font-family:var(--body); font-size:11px; fill:var(--muted)}
-.diagram .core-lbl{font-family:var(--sans); font-size:16px; font-weight:700; fill:#fff}
+.diagram .lbl{font-family:var(--sans); font-size:14px; font-weight:600; fill:var(--ink)}
+.diagram .sub{font-family:var(--body); font-size:12px; fill:var(--muted)}
+.diagram .core-lbl{font-family:var(--sans); font-size:22px; font-weight:700; fill:#fff}
+.diagram .app{fill:var(--obp-soft); stroke:var(--obp); stroke-width:1.2}
+.diagram .band{fill:var(--surface); stroke:var(--accent); stroke-width:1.2; stroke-dasharray:5 4}
+.diagram .band-lbl{font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.06em; fill:var(--accent)}
+.diagram .pill{fill:none; stroke:#3A4460; stroke-width:1.2}
+.diagram .pill-lbl{font-family:var(--sans); font-size:13px; font-weight:500; fill:#fff}
+.diagram .edge{font-family:var(--sans); font-size:11px; font-weight:600; fill:var(--muted)}
+@media (max-width:640px){ .diagram{overflow-x:auto} .diagram svg{min-width:640px} }
 .diagram .core-sub{font-family:var(--mono); font-size:10.5px; fill:#AEB6C0; letter-spacing:.04em}
 .diagram .wire{fill:none; stroke:var(--rule-strong); stroke-width:1.4}
 .diagram .flow{fill:none; stroke:var(--obp); stroke-width:2.2; stroke-linecap:round; stroke-dasharray:6 26; animation:flow 2.6s linear infinite}

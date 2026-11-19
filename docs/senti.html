@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP Senti</title>
+<meta name="description" content="OBP Senti watches OBP-API and its apps, reads the source they run, and suggests the few security and performance fixes that matter most.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">OBP Senti</p>
+    <h1>Watches your platform. Suggests what matters.</h1>
+    <p class="lede">OBP Senti <strong>watches OBP-API and every app beside it for hours, not seconds</strong>, reads the source they run, and suggests the few security and performance fixes that matter most.</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="overview" class="reveal">
+    <div class="sechead"><h2>One view of every instance</h2></div>
+    <p class="intro">Every OBP-API instance and its apps, watched from one page: what Senti suggests, what you rated and what has been fixed.</p>
+    <div class="shot"><div class="bar"><i></i><i></i><i></i><span>OBP Senti</span></div><img src="img/apps/senti-overview.webp" alt="OBP Senti watching an OBP-API instance and its apps" width="1440" height="420" loading="lazy"></div>
+  </section>
+
+  <section id="features">
+    <div class="sechead"><h2>What it does</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Watches for hours</b>Logs, metrics and Telemetry, every two minutes, compared with the hours before</li>
+      <li class="reveal d1"><b>Sees patterns, not blips</b>Log lines about the same problem are grouped and counted over time</li>
+      <li class="reveal d2"><b>Reads the source</b>At the exact commit each instance runs, so a suggestion points at real code</li>
+      <li class="reveal d3"><b>Reviews security</b>Looks for missing authorisation checks and injection, public endpoints first, and brings in SonarCloud issues</li>
+      <li class="reveal"><b>One short briefing</b>At most three suggestions at a time, ranked by impact, confidence, effort and trend, never repeated</li>
+      <li class="reveal d1"><b>Learns from you</b>Rate a suggestion as relevant, important or urgent, comment on it, and Senti adjusts</li>
+      <li class="reveal d2"><b>Fixes, when you ask</b>Press Fix this and Senti changes and tests the code; nothing is committed until you say so</li>
+      <li class="reveal d3"><b>Every instance, every app</b>OBP-API, API Explorer, API Manager, the Portal, Cohort, OBP-OIDC and the Populator</li>
+    </ul>
+  </section>
+
+  <section id="safe">
+    <div class="sechead"><h2>Safe by design</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Read-only</b>A Platform App with its own Scopes: logs, Telemetry and metrics, nothing more</li>
+      <li class="reveal d1"><b>On your infrastructure</b>Runs beside your platform, with no user account and no data leaving it</li>
+      <li class="reveal d2"><b>Finds the apps itself</b>From OBP-API's App Directory, so a new app is watched as soon as it is registered</li>
+      <li class="reveal d3"><b>Capped AI spend</b>Each analysis has a budget, so costs stay predictable</li>
+    </ul>
+  </section>
+
+  <section id="beyond">
+    <div class="sechead"><h2>Beyond OBP</h2></div>
+    <div class="cards one">
+      <div class="card reveal d1">
+        <h3>TESOBE Senti</h3>
+        <p>The same watchful eye for any API, app or website: one short briefing, fixes when you ask.</p>
+        <p class="more"><a href="https://senti.tesobe.com">Visit senti.tesobe.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="portal.html">OBP Portal</a></h3>
+        <p>Where developers sign up, get an API key, read the guides and make their first call.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-explorer.html">API Explorer</a></h3>
+        <p>Every endpoint documented, with the Roles it needs, and callable from the page.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="api-manager.html">API Manager</a></h3>
+        <p>Where bank staff manage users, Roles, consumers and data, and watch the platform live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

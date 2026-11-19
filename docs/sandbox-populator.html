@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandbox Populator</title>
+<meta name="description" content="Sandbox Populator fills an OBP sandbox with realistic banks, customers, accounts and transactions in minutes.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">Sandbox Populator</p>
+    <h1>A realistic sandbox in minutes.</h1>
+    <p class="lede">Sandbox Populator fills an OBP sandbox with <strong>banks, customers, accounts and months of transactions</strong> that look like the real thing, so developers, demos and programmes have something real to work with.</p>
+    <figure class="hero-shot">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>Sandbox Populator</span></div><img src="img/apps/populator-results.webp" alt="Sandbox Populator after a run: the banks, accounts and local business counterparties it created, each linked to API Explorer" width="1831" height="888"></div>
+    </figure>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="steps">
+    <div class="sechead"><h2>From empty to ready</h2></div>
+    <ol class="steps">
+      <li class="reveal"><b>Log in</b><span>With your own OBP account. Every record is created with your login and your Roles.</span></li>
+      <li class="reveal"><b>Choose</b><span>How many banks and accounts, which country, and which kinds of record to create.</span></li>
+      <li class="reveal"><b>Populate</b><span>Banks, customers, accounts and their transaction history appear in OBP-API.</span></li>
+      <li class="reveal"><b>Check</b><span>See what was created, with links to each record in API Explorer.</span></li>
+    </ol>
+  </section>
+
+  <section id="running" class="reveal">
+    <div class="sechead"><h2>Watch it work</h2></div>
+    <p class="intro">Choose a country and how much to create, and follow each step as banks, accounts, customers, FX rates and a year of transactions appear.</p>
+    <div class="shot"><div class="bar"><i></i><i></i><i></i><span>Sandbox Populator</span></div><img src="img/apps/populator-running.webp" alt="Sandbox Populator creating banks, accounts, customers, FX rates and twelve months of transactions for Botswana" width="1831" height="888" loading="lazy"></div>
+  </section>
+
+  <section id="creates">
+    <div class="sechead"><h2>What it creates</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Banks and accounts</b>As many as you need, with the currency of the country you choose</li>
+      <li class="reveal d1"><b>Customers</b>Personal and corporate, linked to their accounts</li>
+      <li class="reveal d2"><b>Transaction history</b>Payments with business names and patterns that look like the real thing</li>
+      <li class="reveal d3"><b>Counterparties and FX rates</b>Who the accounts pay, and the rates between currencies</li>
+      <li class="reveal"><b>Users</b>Test users to log in with and give consent</li>
+      <li class="reveal d1"><b>Your own data</b>Import banks, accounts, customers and transactions from CSV files</li>
+    </ul>
+  </section>
+
+  <section id="for">
+    <div class="sechead"><h2>Made for</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Regulatory sandboxes</b>Give every participant the same realistic data from the first day</li>
+      <li class="reveal d1"><b>Developers</b>Build against accounts and transactions that behave like a bank's</li>
+      <li class="reveal d2"><b>Demos</b>Show a bank its own market, with local names and currency, in minutes</li>
+      <li class="reveal d3"><b>Country data sets</b>Botswana, Singapore and more, each with its own businesses and customers</li>
+    </ul>
+  </section>
+
+  <section id="run">
+    <div class="sechead"><h2>Run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>One image</b>The obp-sandbox-populator Docker image, with Redis for sessions</li>
+      <li class="reveal d1"><b>Remembers your choices</b>Bank prefix, country and currency are kept in your OBP personal data</li>
+      <li class="reveal d2"><b>SvelteKit</b>Svelte 5 and TypeScript, in the OBP-Frontend repository</li>
+      <li class="reveal d3"><b>Open source</b>AGPL, with commercial licences from TESOBE</li>
+    </ul>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="portal.html">OBP Portal</a></h3>
+        <p>Where developers sign up, get an API key, read the guides and make their first call.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-explorer.html">API Explorer</a></h3>
+        <p>Every endpoint documented, with the Roles it needs, and callable from the page.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="api-manager.html">API Manager</a></h3>
+        <p>Where bank staff manage users, Roles, consumers and data, and watch the platform live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

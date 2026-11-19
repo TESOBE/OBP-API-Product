@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API Manager</title>
+<meta name="description" content="API Manager: where bank staff and operators manage users, Roles, consumers and data, build APIs without code and watch the platform live.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">API Manager</p>
+    <h1>Manage the platform from one place.</h1>
+    <p class="lede">API Manager is where bank staff and operators <strong>manage users, Roles, applications and data</strong>, build new APIs without code and watch the platform live.</p>
+    <figure class="hero-shot">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>API Manager</span></div><img src="img/apps/api-manager-dashboard.webp" alt="The API Manager dashboard: API calls, active users and active applications over the last hour, day, week and month, each compared with the period before" width="1831" height="888"></div>
+    </figure>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="areas">
+    <div class="sechead"><h2>What it covers</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3>Govern</h3>
+        <p>Roles and entitlements, granted one by one or in bulk, groups, Role requests and ABAC rules. Applications, rate limits, and Platform Apps with their Scopes.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>Build</h3>
+        <p>Dynamic entities and endpoints, method routing, JSON schema validation and webhooks: new APIs, live, without a release.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Observe</h3>
+        <p>Live and historical metrics, connector metrics, traces and Telemetry, and a dashboard of active users and applications.</p>
+      </div>
+      <div class="card reveal d1">
+        <h3>Banks and customers</h3>
+        <p>Banks, FX rates, customers (personal and corporate, with the links between them), account views, permissions and mandates.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3>Catalogue</h3>
+        <p>API Products and plans, financial products and API collections. Portal pages and the FAQ, published from App Studio.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3>Operate</h3>
+        <p>Data retention, holds and archives, settings, caches, the database pool, migrations and feature flags.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="platform-apps" class="reveal">
+    <div class="sechead"><h2>Every app, with the Scopes it needs</h2></div>
+    <p class="intro">Each Platform App declares the Scopes it needs and why. Administrators see at a glance which Scopes each app holds and which it still needs.</p>
+    <div class="shot"><div class="bar"><i></i><i></i><i></i><span>API Manager</span></div><img src="img/apps/api-manager-platform-apps.webp" alt="The Platform Apps page in API Manager, listing the Scopes an app needs, what each is for, and whether it is held" width="1831" height="888" loading="lazy"></div>
+  </section>
+
+  <section id="people">
+    <div class="sechead"><h2>Made for the people who run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Each person sees their own</b>Pages show what a person's Roles allow, and say which Role is missing and how to ask for it</li>
+      <li class="reveal d1"><b>Linked to the docs</b>Every page links to the API Explorer documentation for the endpoints it calls</li>
+      <li class="reveal d2"><b>Users and invitations</b>Find users, lock and unlock them, reset passwords and send invitations</li>
+      <li class="reveal d3"><b>Live</b>Metrics and logs stream from OBP-API over gRPC as they happen</li>
+    </ul>
+  </section>
+
+  <section id="run">
+    <div class="sechead"><h2>Run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>One image</b>The api-manager-ii Docker image, with Redis for sessions</li>
+      <li class="reveal d1"><b>A Platform App</b>It declares the Scopes it needs, and an administrator grants them</li>
+      <li class="reveal d2"><b>SvelteKit</b>Svelte 5 and TypeScript, in the OBP-Frontend repository</li>
+      <li class="reveal d3"><b>Open source</b>AGPL, with commercial licences from TESOBE</li>
+    </ul>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="portal.html">OBP Portal</a></h3>
+        <p>Where developers sign up, get an API key, read the guides and make their first call.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-explorer.html">API Explorer</a></h3>
+        <p>Every endpoint documented, with the Roles it needs, and callable from the page.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="sandbox-populator.html">Sandbox Populator</a></h3>
+        <p>Fills a sandbox with realistic banks, customers, accounts and transactions in minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

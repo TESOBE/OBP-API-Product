@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opey</title>
+<meta name="description" content="Opey, the OBP AI assistant: answers questions about your APIs and acts on banking data, only with the consent each person gives it.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">Opey</p>
+    <h1>An assistant that asks first.</h1>
+    <p class="lede">Opey is the AI assistant inside the Portal, API Manager and every OBP app. It <strong>answers questions, finds the right endpoint and acts on banking data</strong>, only with the consent each person gives it.</p>
+    <figure class="hero-shot">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>apisandbox-portal.openbankproject.com</span></div><img src="img/apps/portal-home.webp" alt="Opey on the OBP Portal home page, ready for a question" width="1440" height="900"></div>
+    </figure>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="features">
+    <div class="sechead"><h2>What it does</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Answers questions</b>About OBP, your APIs, the standards and the glossary, in plain language</li>
+      <li class="reveal d1"><b>Finds the right endpoint</b>And explains what it needs, from more than 600 endpoints</li>
+      <li class="reveal d2"><b>Acts on banking data</b>Reads accounts and transactions, and more, through OBP-MCP</li>
+      <li class="reveal d3"><b>Fills in forms for you</b>Drafts the values into the form you have open; you check them and submit</li>
+      <li class="reveal"><b>Built into every app</b>The Portal, API Manager, Cohort and Conformator share one chat component</li>
+      <li class="reveal d1"><b>Streams its answers</b>Replies appear as they are written, and you can stop or regenerate one</li>
+    </ul>
+  </section>
+
+  <section id="safe">
+    <div class="sechead"><h2>Safe by design</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Consent for every call</b>Each call to OBP-API carries a consent the person approved; the model never sees the token</li>
+      <li class="reveal d1"><b>You approve each tool</b>For one call, for the conversation, or always, and you can batch approvals</li>
+      <li class="reveal d2"><b>Your own permissions</b>Opey can do no more than the person it is helping</li>
+      <li class="reveal d3"><b>Open to guests, safely</b>Anonymous chat with limits, and a login when banking data is needed</li>
+      <li class="reveal"><b>Rate limits and usage</b>Limits per person and overall, with usage tracked</li>
+      <li class="reveal d1"><b>Your choice of model</b>Anthropic, OpenAI or a local model through Ollama</li>
+    </ul>
+  </section>
+
+  <section id="run">
+    <div class="sechead"><h2>Run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>A Python service</b>FastAPI and LangGraph, with Redis, beside your OBP-API</li>
+      <li class="reveal d1"><b>Tools from MCP</b>Its banking tools come from OBP-MCP, or any MCP server you add</li>
+      <li class="reveal d2"><b>One setting per app</b>Each app points at Opey with one address, and can add its own instructions</li>
+      <li class="reveal d3"><b>Open source</b>AGPL on <a href="https://github.com/OpenBankProject/OBP-Opey-II">GitHub</a>, with commercial licences from TESOBE</li>
+    </ul>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="portal.html">OBP Portal</a></h3>
+        <p>Where developers sign up, get an API key, read the guides and make their first call.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-explorer.html">API Explorer</a></h3>
+        <p>Every endpoint documented, with the Roles it needs, and callable from the page.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="api-manager.html">API Manager</a></h3>
+        <p>Where bank staff manage users, Roles, consumers and data, and watch the platform live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP-MCP</title>
+<meta name="description" content="OBP-MCP: a Model Context Protocol server that lets AI agents find and call every OBP-API endpoint, with the user&#x27;s own permissions.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">OBP-MCP</p>
+    <h1>Your API, ready for AI agents.</h1>
+    <p class="lede">OBP-MCP is a Model Context Protocol server that lets AI agents such as Claude <strong>find and call every OBP-API endpoint</strong>, with the user's own permissions, without loading the whole API into the model.</p>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="connect" class="reveal">
+    <div class="sechead"><h2>Connect in one line</h2></div>
+    <p class="intro">The server's own page shows its address and how to connect Claude Code, Claude Desktop, VS Code and other MCP clients.</p>
+    <div class="shot"><div class="bar"><i></i><i></i><i></i><span>OBP-MCP</span></div><img src="img/apps/mcp-connect.webp" alt="The OBP-MCP start page, with the MCP endpoint and how to connect Claude Code, Claude Desktop and VS Code" width="940" height="900" loading="lazy"></div>
+  </section>
+
+  <section id="features">
+    <div class="sechead"><h2>What agents can do</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Find the right endpoint</b>Browse more than 600 endpoints by tag, then read the full schema of the one they need</li>
+      <li class="reveal d1"><b>Call it</b>Make the request and read the answer, as the person they act for</li>
+      <li class="reveal d2"><b>Understand the terms</b>Look up more than 800 glossary entries, from ABAC to Views</li>
+      <li class="reveal d3"><b>Stay small</b>Agents read only what they need, rather than the whole API description</li>
+    </ul>
+  </section>
+
+  <section id="auth">
+    <div class="sechead"><h2>Two ways to authorise</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>With the user's own login</b>For Claude, VS Code, Zed and other clients: OAuth 2.1 with discovery, dynamic client registration and PKCE, through OBP-OIDC or Keycloak</li>
+      <li class="reveal d1"><b>With a consent per call</b>For Opey: each call carries a consent the person approved, and nothing happens without one</li>
+      <li class="reveal d2"><b>The same Roles as anyone</b>OBP-API checks every call against the person's own Roles and views</li>
+      <li class="reveal d3"><b>Ready for production</b>Health and readiness checks, a status page, and the caller's address passed on for rate limits</li>
+    </ul>
+  </section>
+
+  <section id="run">
+    <div class="sechead"><h2>Run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>A Python service</b>FastMCP over streamable HTTP, or stdio for local clients</li>
+      <li class="reveal d1"><b>Always up to date</b>Its endpoint and glossary indexes are built from your own OBP-API when it starts</li>
+      <li class="reveal d2"><b>One container</b>A Dockerfile and Compose file, configured by environment</li>
+      <li class="reveal d3"><b>Open source</b>AGPL on <a href="https://github.com/OpenBankProject/OBP-MCP">GitHub</a>, with commercial licences from TESOBE</li>
+    </ul>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="portal.html">OBP Portal</a></h3>
+        <p>Where developers sign up, get an API key, read the guides and make their first call.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-explorer.html">API Explorer</a></h3>
+        <p>Every endpoint documented, with the Roles it needs, and callable from the page.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="api-manager.html">API Manager</a></h3>
+        <p>Where bank staff manage users, Roles, consumers and data, and watch the platform live.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

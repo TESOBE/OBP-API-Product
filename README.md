@@ -8,6 +8,7 @@ It is plain HTML, one stylesheet and one script, with no build step. Edit the pa
 
 - `index.html`: overview, with the figures, a demo of API calls and the architecture diagram
 - `capabilities.html`, `security.html`, `standards.html`, `architecture.html`, `deploy.html`
+- `apps.html`, with a page per app: `portal.html`, `api-explorer.html`, `api-manager.html`, `sandbox-populator.html`, `hola.html`, `opey.html`, `mcp.html`, `bank-node.html`, `senti.html`. Their screenshots are in `docs/img/apps/`
 
 ## Figures
 

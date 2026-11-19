@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>API Explorer</title>
+<meta name="description" content="API Explorer: every OBP-API endpoint documented, with the Roles it needs and the errors it can return, and callable from the page.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">API Explorer</p>
+    <h1>Every endpoint, documented and callable.</h1>
+    <p class="lede">API Explorer shows <strong>every endpoint OBP-API serves</strong>, with the Roles it needs and the errors it can return, and lets you call it there and then.</p>
+    <figure class="hero-shot">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>apiexplorer-ii-sandbox.openbankproject.com</span></div><img src="img/apps/explorer-endpoint.webp" alt="An endpoint in API Explorer, with its documentation, request body, typical response and required Roles" width="1440" height="900"></div>
+    </figure>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="features">
+    <div class="sechead"><h2>What you can do</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Browse by version and standard</b>OBP versions, UK Open Banking, Berlin Group and every other standard OBP-API serves, filtered by tag</li>
+      <li class="reveal d1"><b>Read each endpoint</b>The request, a typical response, validations, the errors it can return and the connector methods behind it</li>
+      <li class="reveal d2"><b>See the Roles it needs</b>And ask for a missing Role from the same page</li>
+      <li class="reveal d3"><b>Call it as yourself</b>Send the request with your own login, and edit the JSON body as you go</li>
+      <li class="reveal"><b>Dynamic endpoints too</b>Endpoints you create in OBP-API appear beside the built-in ones, documented the same way</li>
+      <li class="reveal d1"><b>The glossary</b>Every OBP term explained, from ABAC to Views</li>
+      <li class="reveal d2"><b>Message docs</b>The messages a connector exchanges with your core banking system, with their JSON schemas</li>
+      <li class="reveal d3"><b>gRPC and collections</b>The gRPC services, and API collections people have shared</li>
+    </ul>
+  </section>
+
+  <section id="audiences">
+    <div class="sechead"><h2>For everyone who works with the API</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Developers</b>Find the right endpoint and try it before writing a line of code</li>
+      <li class="reveal d1"><b>Bank staff</b>See exactly which Role each endpoint needs, and why a call was refused</li>
+      <li class="reveal d2"><b>Connector builders</b>Read the message docs for each core banking integration</li>
+      <li class="reveal d3"><b>Regulators and partners</b>Read the whole API surface, in English, Spanish or Romanian</li>
+    </ul>
+  </section>
+
+  <section id="run">
+    <div class="sechead"><h2>Run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Any OpenID Connect provider</b>OBP-OIDC, Keycloak, Google, GitHub or your own, discovered from OBP-API</li>
+      <li class="reveal d1"><b>Two images</b>openbankproject/api-explorer-ii and api-explorer-ii-nginx, configured when the container starts</li>
+      <li class="reveal d2"><b>Vue and Express</b>Vue 3 in the browser, an Express server beside it</li>
+      <li class="reveal d3"><b>Open source</b>AGPL on <a href="https://github.com/OpenBankProject/API-Explorer-II">GitHub</a>, with commercial licences from TESOBE</li>
+    </ul>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="portal.html">OBP Portal</a></h3>
+        <p>Where developers sign up, get an API key, read the guides and make their first call.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-manager.html">API Manager</a></h3>
+        <p>Where bank staff manage users, Roles, consumers and data, and watch the platform live.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="sandbox-populator.html">Sandbox Populator</a></h3>
+        <p>Fills a sandbox with realistic banks, customers, accounts and transactions in minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

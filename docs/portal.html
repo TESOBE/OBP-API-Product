@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBP Portal</title>
+<meta name="description" content="The OBP Portal: where developers sign up, get an API key, read the guides, give consents and subscribe to API Products.">
+<link rel="icon" type="image/png" href="img/obp-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Karla:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+<header class="masthead inner">
+  <div class="mast-inner">
+    <div class="topbar">
+      <a href="https://www.openbankproject.com"><img class="logo obp-logo" alt="Open Bank Project" src="img/obp-logo.png" width="1000" height="127"></a>
+      <nav class="topnav" aria-label="Pages">
+        <a href="./">Overview</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="security.html">Security</a>
+        <a href="standards.html">Standards</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="apps.html" aria-current="page">Apps</a>
+        <a href="deploy.html">Deploy</a>
+        <a href="./#talk">Contact</a>
+      </nav>
+    </div>
+    <p class="eyebrow">OBP Portal</p>
+    <h1>Where developers start.</h1>
+    <p class="lede">The Portal is the front door to your APIs: developers <strong>sign up, get an API key and make their first call</strong> in minutes, with Opey, the AI assistant, on hand to help.</p>
+    <figure class="hero-shot">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i><span>apisandbox-portal.openbankproject.com</span></div><img src="img/apps/portal-home.webp" alt="The OBP Portal home page, with Opey, the AI assistant, ready to answer questions" width="1440" height="900"></div>
+    </figure>
+  </div>
+</header>
+
+<div class="page">
+
+  <section id="features">
+    <div class="sechead"><h2>What developers can do</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Get an API key</b>Register an application and manage its credentials, usage and Scopes</li>
+      <li class="reveal d1"><b>Follow the guides</b>Getting started, OAuth2 and OpenID Connect, Direct Login, consents, VRP, AI agents and MCP, and SDKs</li>
+      <li class="reveal d2"><b>Browse the APIs</b>Every standard and version, with each endpoint, the glossary, message docs and gRPC docs</li>
+      <li class="reveal d3"><b>Ask Opey</b>The AI assistant answers questions and finds the right endpoint, with the developer's own permissions</li>
+      <li class="reveal"><b>Subscribe to API Products</b>Choose a plan, pay by card through Stripe, and get access the moment the subscription starts</li>
+      <li class="reveal d1"><b>Work as a team</b>Applications belong to an Organisation, so the whole team shares their usage and subscriptions</li>
+      <li class="reveal d2"><b>Give and manage consents</b>OBP, UK Open Banking and Berlin Group consents, VRP and SCA, all reviewable later</li>
+      <li class="reveal d3"><b>See their own data</b>Accounts, mandates, Roles, API collections, personal data and activity</li>
+    </ul>
+  </section>
+
+  <section id="guides" class="reveal">
+    <div class="sechead"><h2>Guides that get you to the first call</h2></div>
+    <p class="intro">From an account to a working API call in five steps, with guides for every way to authenticate.</p>
+    <div class="shot"><div class="bar"><i></i><i></i><i></i><span>apisandbox-portal.openbankproject.com/developers/getting-started</span></div><img src="img/apps/portal-guide.webp" alt="The Getting Started guide in the OBP Portal" width="1440" height="900" loading="lazy"></div>
+  </section>
+
+  <section id="shape">
+    <div class="sechead"><h2>Yours to shape</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>Your content</b>Pages, the FAQ and featured endpoints are published from API Manager's App Studio, with no deploy</li>
+      <li class="reveal d1"><b>Your brand</b>Logo, colours and wording come from OBP-API settings</li>
+      <li class="reveal d2"><b>Your products</b>API Products and financial products come straight from your catalogue in OBP-API</li>
+      <li class="reveal d3"><b>Your identity provider</b>Developers log in through OBP with OAuth2 and OpenID Connect</li>
+    </ul>
+  </section>
+
+  <section id="run">
+    <div class="sechead"><h2>Run it</h2></div>
+    <ul class="points">
+      <li class="reveal"><b>One image</b>The obp-portal Docker image, with Redis for sessions</li>
+      <li class="reveal d1"><b>A Platform App</b>It declares the Scopes it needs, and an administrator grants them</li>
+      <li class="reveal d2"><b>SvelteKit</b>Svelte 5 and TypeScript, in the OBP-Frontend repository</li>
+      <li class="reveal d3"><b>Open source</b>AGPL, with commercial licences from TESOBE</li>
+    </ul>
+  </section>
+
+  <section id="more-apps">
+    <div class="sechead"><h2>More apps</h2></div>
+    <div class="cards">
+      <div class="card reveal d1">
+        <h3><a href="api-explorer.html">API Explorer</a></h3>
+        <p>Every endpoint documented, with the Roles it needs, and callable from the page.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3><a href="api-manager.html">API Manager</a></h3>
+        <p>Where bank staff manage users, Roles, consumers and data, and watch the platform live.</p>
+      </div>
+      <div class="card reveal d3">
+        <h3><a href="sandbox-populator.html">Sandbox Populator</a></h3>
+        <p>Fills a sandbox with realistic banks, customers, accounts and transactions in minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk" class="reveal">
+    <div class="sechead"><h2>Talk to us</h2></div>
+    <div class="contact">
+      <p>Planning an open banking platform, a banking-as-a-service offer or a regulatory sandbox? Tell us what you want to build, and we will show you OBP-API and its apps working with your own banks, products and standards.</p>
+      <p class="mailto"><a href="https://www.tesobe.com/#contact">Contact TESOBE</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="maker" href="https://www.tesobe.com">
+      <img alt="TESOBE" src="img/tesobe-logo.png" width="400" height="114">
+    </a>
+    <p class="stats">
+      <span><a href="https://www.tesobe.com">TESOBE GmbH</a> · Innovating in Berlin since 2004</span>
+      <span><a href="https://www.openbankproject.com">Open Bank Project</a> since 2010</span>
+      <span><a href="https://github.com/OpenBankProject/OBP-API">OBP-API on GitHub</a> · AGPL, with commercial licences</span>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
