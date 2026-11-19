@@ -1,0 +1,39 @@
+# OBP-API
+
+> OBP-API is the open source API platform for banks, from the Open Bank Project, made by TESOBE GmbH in Berlin. It gives banks, fintechs and regulators one modern API across every core banking system: accounts, payments, customers and consents, with UK Open Banking, Berlin Group and OBP standards built in, and access decided on every call by Roles, views and consents. It is licensed under the AGPL, with commercial licences from TESOBE.
+
+OBP-API is written in Scala and runs as one JAR, in Docker or in Kubernetes. A public sandbox runs at https://apisandbox.openbankproject.com, and the code is at https://github.com/OpenBankProject/OBP-API.
+
+## The platform
+
+- [OBP-API: the open source API platform for banks](https://obp-api-product.tesobe.com/): OBP-API is the open source API platform for banks: 900+ endpoints, the Berlin Group and UK Open Banking standards, fine-grained access control and dynamic APIs, on any core banking system.
+- [OBP-API capabilities: accounts, payments, consents and more](https://obp-api-product.tesobe.com/capabilities.html): What OBP-API does: accounts, payments, customers, KYC, files, products, the asset registry, dynamic APIs, AI agents and operations.
+- [OBP-API security: authentication, Roles, views and consents](https://obp-api-product.tesobe.com/security.html): How OBP-API decides access on every call: views, Roles, Scopes, Platform Apps, consents, OAuth 2, OpenID Connect, mutual TLS and rate limits.
+- [Open banking standards in OBP-API: UK Open Banking, Berlin Group and OBP](https://obp-api-product.tesobe.com/standards.html): The API standards OBP-API serves: the Open Bank Project API, Berlin Group NextGenPSD2 and UK Open Banking, with OpenAPI documents for each.
+- [OBP-API architecture and connectors](https://obp-api-product.tesobe.com/architecture.html): How OBP-API fits together: applications, the API layers, connectors to core banking systems, the OBP ecosystem and the technology stack.
+- [OBP-API apps: Portal, API Explorer, API Manager, Opey and more](https://obp-api-product.tesobe.com/apps.html): The apps that come with OBP-API: the Portal, API Explorer, API Manager, Sandbox Populator, OBP Hola, Opey, OBP-MCP, OBP Bank Node and OBP Senti, and the products built on OBP-API.
+- [Deploy OBP-API on your own infrastructure](https://obp-api-product.tesobe.com/deploy.html): How to run OBP-API: get the code, choose a database and connector, build one JAR, and run it alone, in Docker or in Kubernetes.
+
+## The apps
+
+- [OBP Portal: the developer portal for OBP-API](https://obp-api-product.tesobe.com/portal.html): The OBP Portal: where developers sign up, get an API key, read the guides, give consents and subscribe to API Products.
+- [API Explorer: documentation and testing for OBP-API](https://obp-api-product.tesobe.com/api-explorer.html): API Explorer: every OBP-API endpoint documented, with the Roles it needs and the errors it can return, and callable from the page.
+- [API Manager: manage users, Roles and APIs on OBP-API](https://obp-api-product.tesobe.com/api-manager.html): API Manager: where bank staff and operators manage users, Roles, consumers and data, build APIs without code and watch the platform live.
+- [Sandbox Populator: realistic test data for OBP-API](https://obp-api-product.tesobe.com/sandbox-populator.html): Sandbox Populator fills an OBP sandbox with realistic banks, customers, accounts and transactions in minutes.
+- [OBP Hola: a reference open banking consent app](https://obp-api-product.tesobe.com/hola.html): OBP Hola: a reference third-party app that shows the OAuth2 and consent flow end to end, with UK Open Banking, Berlin Group and OBP APIs.
+- [Opey: the AI assistant for OBP-API](https://obp-api-product.tesobe.com/opey.html): Opey, the OBP AI assistant: answers questions about your APIs and acts on banking data, only with the consent each person gives it.
+- [OBP-MCP: an MCP server for AI agents and OBP-API](https://obp-api-product.tesobe.com/mcp.html): OBP-MCP: a Model Context Protocol server that lets AI agents find and call every OBP-API endpoint, with the user's own permissions.
+- [OBP Bank Node: join payment corridors with the Open Corridor standard](https://obp-api-product.tesobe.com/bank-node.html): OBP Bank Node runs inside a bank and connects its core banking system to cross-border payment corridors using the Open Corridor standard, with a private, verifiable record of every step.
+- [OBP Senti: watches OBP-API and suggests security and performance fixes](https://obp-api-product.tesobe.com/senti.html): OBP Senti watches OBP-API and its apps, reads the source they run, and suggests the few security and performance fixes that matter most.
+
+## Built on OBP-API
+
+- [OBP Cohort](https://cohort.tesobe.com): runs startup and innovation programmes, from the call for applications to graduation.
+- [Conformator](https://conformator.tesobe.com): tests open banking participants against the agreed APIs and issues signed conformance reports.
+- [TESOBE Senti](https://senti.tesobe.com): the same watchful eye as OBP Senti, for any API, app or website.
+
+## Optional
+
+- [OBP-API on GitHub](https://github.com/OpenBankProject/OBP-API): the code, README and introductory documentation.
+- [API sandbox](https://apisandbox.openbankproject.com): try the API with test banks and data.
+- [Contact TESOBE](https://www.tesobe.com/#contact): talk to the team that makes it.

@@ -3,8 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OBP-API Architecture</title>
+<title>OBP-API architecture and connectors | Open Bank Project</title>
 <meta name="description" content="How OBP-API fits together: applications, the API layers, connectors to core banking systems, the OBP ecosystem and the technology stack.">
+<!-- seo: written by scripts/update_seo.py; change the page list there, not here -->
+<link rel="canonical" href="https://obp-api-product.tesobe.com/architecture.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OBP-API">
+<meta property="og:title" content="OBP-API architecture and connectors | Open Bank Project">
+<meta property="og:description" content="How OBP-API fits together: applications, the API layers, connectors to core banking systems, the OBP ecosystem and the technology stack.">
+<meta property="og:url" content="https://obp-api-product.tesobe.com/architecture.html">
+<meta property="og:image" content="https://obp-api-product.tesobe.com/img/social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OBP-API: the open source API platform for banks">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OBP-API architecture and connectors | Open Bank Project">
+<meta name="twitter:description" content="How OBP-API fits together: applications, the API layers, connectors to core banking systems, the OBP ecosystem and the technology stack.">
+<meta name="twitter:image" content="https://obp-api-product.tesobe.com/img/social.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://www.tesobe.com/#organization",
+   "name": "TESOBE GmbH",
+   "url": "https://www.tesobe.com",
+   "sameAs": [
+    "https://github.com/OpenBankProject",
+    "https://www.openbankproject.com"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://obp-api-product.tesobe.com/#website",
+   "url": "https://obp-api-product.tesobe.com/",
+   "name": "OBP-API",
+   "publisher": {
+    "@id": "https://www.tesobe.com/#organization"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://obp-api-product.tesobe.com/architecture.html#webpage",
+   "url": "https://obp-api-product.tesobe.com/architecture.html",
+   "name": "OBP-API architecture and connectors | Open Bank Project",
+   "description": "How OBP-API fits together: applications, the API layers, connectors to core banking systems, the OBP ecosystem and the technology stack.",
+   "isPartOf": {
+    "@id": "https://obp-api-product.tesobe.com/#website"
+   },
+   "inLanguage": "en"
+  }
+ ]
+}
+</script>
+<!-- /seo -->
 <link rel="icon" type="image/png" href="img/obp-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,68 +119,68 @@
       <path class="flow back" d="M834 420 V480" style="animation-delay:-.2s"/>
 
       <!-- Callers -->
-      <rect class="app" x="20" y="20" width="168" height="60" rx="10"/>
+      <rect class="app" fill="#E6F4E9" stroke="#51B265" x="20" y="20" width="168" height="60" rx="10"/>
       <text class="lbl" x="104" y="46" text-anchor="middle">Your apps and TPPs</text>
       <text class="sub" x="104" y="64" text-anchor="middle">banks, fintechs, partners</text>
 
-      <rect class="box" x="208" y="20" width="168" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="208" y="20" width="168" height="60" rx="10"/>
       <text class="lbl" x="292" y="46" text-anchor="middle">OBP Portal</text>
       <text class="sub" x="292" y="64" text-anchor="middle">where developers start</text>
 
-      <rect class="box" x="396" y="20" width="168" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="396" y="20" width="168" height="60" rx="10"/>
       <text class="lbl" x="480" y="46" text-anchor="middle">API Explorer</text>
       <text class="sub" x="480" y="64" text-anchor="middle">every endpoint, callable</text>
 
-      <rect class="box" x="584" y="20" width="168" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="584" y="20" width="168" height="60" rx="10"/>
       <text class="lbl" x="668" y="46" text-anchor="middle">API Manager</text>
       <text class="sub" x="668" y="64" text-anchor="middle">manage the platform</text>
 
-      <rect class="box" x="772" y="20" width="168" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="772" y="20" width="168" height="60" rx="10"/>
       <text class="lbl" x="856" y="46" text-anchor="middle">Opey and OBP-MCP</text>
       <text class="sub" x="856" y="64" text-anchor="middle">AI agents</text>
 
       <!-- OAuth2 / OIDC band -->
-      <rect class="band" x="20" y="112" width="920" height="104" rx="10"/>
+      <rect class="band" fill="none" stroke="#15759B" stroke-dasharray="5 4" x="20" y="112" width="920" height="104" rx="10"/>
       <text class="band-lbl" x="198" y="160" text-anchor="middle">OAUTH2 AND</text>
       <text class="band-lbl" x="198" y="178" text-anchor="middle">OPENID CONNECT</text>
-      <rect class="box" x="308" y="134" width="156" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="308" y="134" width="156" height="60" rx="10"/>
       <text class="lbl" x="386" y="160" text-anchor="middle">OBP-OIDC</text>
       <text class="sub" x="386" y="178" text-anchor="middle">built for OBP</text>
-      <rect class="box" x="496" y="134" width="156" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="496" y="134" width="156" height="60" rx="10"/>
       <text class="lbl" x="574" y="160" text-anchor="middle">Keycloak</text>
       <text class="sub" x="574" y="178" text-anchor="middle">with the OBP plugin</text>
       <text class="band-lbl" x="762" y="160" text-anchor="middle">OR ANY OTHER</text>
       <text class="band-lbl" x="762" y="178" text-anchor="middle">OIDC PROVIDER</text>
 
       <!-- OBP-API -->
-      <rect class="core" x="20" y="270" width="920" height="150" rx="14"/>
+      <rect class="core" fill="#1B2032" stroke="#51B265" x="20" y="270" width="920" height="150" rx="14"/>
       <text class="core-lbl" x="480" y="308" text-anchor="middle">OBP-API</text>
       <text class="core-sub" x="480" y="330" text-anchor="middle">ONE API ACROSS EVERY CORE BANKING SYSTEM</text>
-      <rect class="pill" x="55" y="352" width="200" height="40" rx="8"/>
+      <rect class="pill" fill="none" stroke="#3A4460" x="55" y="352" width="200" height="40" rx="8"/>
       <text class="pill-lbl" x="155" y="377" text-anchor="middle">Standards</text>
-      <rect class="pill" x="280" y="352" width="200" height="40" rx="8"/>
+      <rect class="pill" fill="none" stroke="#3A4460" x="280" y="352" width="200" height="40" rx="8"/>
       <text class="pill-lbl" x="380" y="377" text-anchor="middle">Roles and views</text>
-      <rect class="pill" x="505" y="352" width="200" height="40" rx="8"/>
+      <rect class="pill" fill="none" stroke="#3A4460" x="505" y="352" width="200" height="40" rx="8"/>
       <text class="pill-lbl" x="605" y="377" text-anchor="middle">Dynamic APIs</text>
-      <rect class="pill" x="730" y="352" width="200" height="40" rx="8"/>
+      <rect class="pill" fill="none" stroke="#3A4460" x="730" y="352" width="200" height="40" rx="8"/>
       <text class="pill-lbl" x="830" y="377" text-anchor="middle">Connectors</text>
 
       <!-- Your systems -->
       <text class="edge" x="480" y="455" text-anchor="middle">a connector for each bank</text>
 
-      <rect class="box" x="20" y="480" width="212" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="20" y="480" width="212" height="60" rx="10"/>
       <text class="lbl" x="126" y="506" text-anchor="middle">Core banking systems</text>
       <text class="sub" x="126" y="524" text-anchor="middle">any vendor, old or new</text>
 
-      <rect class="box" x="256" y="480" width="212" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="256" y="480" width="212" height="60" rx="10"/>
       <text class="lbl" x="362" y="506" text-anchor="middle">Payment rails</text>
       <text class="sub" x="362" y="524" text-anchor="middle">SEPA and local schemes</text>
 
-      <rect class="box" x="492" y="480" width="212" height="60" rx="10"/>
+      <rect class="box" fill="#ECEFEF" stroke="#BDC4C8" x="492" y="480" width="212" height="60" rx="10"/>
       <text class="lbl" x="598" y="506" text-anchor="middle">Blockchains</text>
       <text class="sub" x="598" y="524" text-anchor="middle">Cardano and Ethereum</text>
 
-      <rect class="app" x="728" y="480" width="212" height="60" rx="10"/>
+      <rect class="app" fill="#E6F4E9" stroke="#51B265" x="728" y="480" width="212" height="60" rx="10"/>
       <text class="lbl" x="834" y="506" text-anchor="middle">Bank Nodes</text>
       <text class="sub" x="834" y="524" text-anchor="middle">banks on a shared network</text>
       </svg>

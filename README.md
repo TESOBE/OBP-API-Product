@@ -20,6 +20,21 @@ python3 scripts/update_figures.py https://apisandbox.openbankproject.com
 
 The GitHub Action in `.github/workflows/update-figures.yml` runs it every day, and commits `figures.json` when a figure changes.
 
+## Search engines and AI tools
+
+`scripts/update_seo.py` writes what search engines and AI tools read, from one list of pages:
+
+- in each page's head, between `<!-- seo:` and `<!-- /seo -->`: the canonical address, Open Graph and Twitter tags for link previews, and JSON-LD structured data (TESOBE, the site, the page, and for each product page the software itself). It also sets each page's title;
+- `docs/sitemap.xml`, `docs/robots.txt` and `docs/llms.txt` (a short Markdown guide to the site for AI tools, see https://llmstxt.org).
+
+Each page's own `<meta name="description">` is the description used everywhere. After adding or renaming a page, or changing a title or description, add the page to `PAGES` in the script and run it:
+
+```bash
+python3 scripts/update_seo.py
+```
+
+It stops with a message if a page in `docs/` is missing from its list. The GitHub Action in `.github/workflows/update-seo.yml` runs it whenever a page or the script changes on `main`, and commits the result, so running it by hand is only needed to see the result before pushing. The sitemap dates each page by its last commit. The image shown when a link is shared is `docs/img/social.jpg` (1200 by 630).
+
 ## Animation
 
 Sections fade in as they scroll into view, the figures count up, the demo terminal types API calls, and the diagram shows requests flowing. All of it is switched off for visitors who ask their system for reduced motion.
